@@ -1,0 +1,17 @@
+{
+  "name": "aws-cli-default-profile-switcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts/switch-aws-profile.js",
+  "scripts": {
+    "switch-aws-profile": "node scripts/switch-aws-profile \"$(aws configure list-profiles | fzf)\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ini": "^4.1.0"
+  },
+  "volta": {
+    "node": "18.16.0"
+  }
+}
