@@ -16,28 +16,33 @@ Switch AWS CLI `~/.aws/credentials` → `[default]` profile via command line.
 - Ensure [Node](https://nodejs.org/en/download) running:<br>`$ node -v` >= `18.16*`
 - Install dependencies:<br>
   `$ npm ci`
-- To use a GUI to select your profile name…
+- To use [with a GUI](#with-gui):
   - Ensure [fzf](https://formulae.brew.sh/formula/fzf) installed:<br>
     `$ which fzf`
   - Run:<br>
     `$ npm run switch-aws-profile`
-- Otherwise…
+- To use [without a GUI](#without-gui):
   - Run:<br>
     `$ node scripts/switch-aws-profile "<PROFILE NAME>"`
 
 ## Usage
 
+- [With GUI](#with-gui)
+- [Without GUI](#without-gui)
+
 ### With GUI
 
-To pick from existing profiles via GUI:
+To select from existing profiles via GUI:
 
 ```console
 $ npm run switch
 ```
 
-> **Note**: Requires `fzf` command (tip: install via [brew](https://brew.sh/)).
+> **Note**: Requires `fzf` command (install via [brew](https://brew.sh/)).
 
 ### Without GUI
+
+To pass an existing profile name directly:
 
 ```console
 $ node . "<PROFILE NAME>"
